@@ -26,6 +26,13 @@ namespace WindowsFormsApp01
             if (username == "0003168@st.huce.edu.vn" && password == "0003168")
             {
                 MessageBox.Show("Đăng nhập thành công");
+                Form QLSinhVien  = new QLSinhVien();
+
+                // 2. Hien thi Form moi
+                QLSinhVien.Show();
+
+                // 3. An Form hien tai (Form Quan ly Sinh vien)
+                this.Hide();
             }
             else
             {
