@@ -19,3 +19,6 @@ D:\C#\WindowsFormApp\WindowsFormsApp01\obj\Debug\WindowsFormsApp01.csproj.CoreCo
 D:\C#\WindowsFormApp\WindowsFormsApp01\obj\Debug\WindowsFormsApp01.exe
 D:\C#\WindowsFormApp\WindowsFormsApp01\obj\Debug\WindowsFormsApp01.pdb
 D:\C#\WindowsFormApp\WindowsFormsApp01\obj\Debug\WindowsFormsApp01.QLSinhVien.resources
+D:\C#\WindowsFormApp\WindowsFormsApp01\obj\Debug\WindowsFormsApp01.Login.resources
+D:\C#\WindowsFormApp\WindowsFormsApp01\obj\Debug\WindowsFormsApp01.UC_QLSV.resources
+D:\C#\WindowsFormApp\WindowsFormsApp01\obj\Debug\WindowsFormsApp01.UC_QLLH.resources

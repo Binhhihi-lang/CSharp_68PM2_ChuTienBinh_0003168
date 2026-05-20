@@ -2,15 +2,8 @@
 {
     partial class Main
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,99 +15,119 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.btn_login = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.username = new System.Windows.Forms.Label();
-            this.password = new System.Windows.Forms.Label();
-            this.txt_username = new System.Windows.Forms.TextBox();
-            this.txt_password = new System.Windows.Forms.TextBox();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnDangXuat = new System.Windows.Forms.Button();
+            this.btnQLLH = new System.Windows.Forms.Button();
+            this.btnQLSV = new System.Windows.Forms.Button();
+            this.panelContainer = new System.Windows.Forms.Panel();
+            this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btn_login
+            // panelMenu
             // 
-            this.btn_login.Location = new System.Drawing.Point(319, 258);
-            this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(122, 36);
-            this.btn_login.TabIndex = 0;
-            this.btn_login.Text = "Đăng nhập ";
-            this.btn_login.UseVisualStyleBackColor = true;
-            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            this.panelMenu.BackColor = System.Drawing.Color.White;
+            this.panelMenu.Controls.Add(this.btnDangXuat);
+            this.panelMenu.Controls.Add(this.btnQLLH);
+            this.panelMenu.Controls.Add(this.btnQLSV);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(1100, 45);
+            this.panelMenu.TabIndex = 0;
             // 
-            // label1
+            // btnDangXuat
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(250, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(277, 38);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Quản lý sinh viên ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.btnDangXuat.AutoSize = true;
+            this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDangXuat.FlatAppearance.BorderSize = 0;
+            this.btnDangXuat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnDangXuat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnDangXuat.ForeColor = System.Drawing.Color.IndianRed;
+            this.btnDangXuat.Location = new System.Drawing.Point(368, 0);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnDangXuat.Size = new System.Drawing.Size(129, 45);
+            this.btnDangXuat.TabIndex = 2;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
-            // username
+            // btnQLLH
             // 
-            this.username.AutoSize = true;
-            this.username.Location = new System.Drawing.Point(239, 148);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(88, 16);
-            this.username.TabIndex = 2;
-            this.username.Text = "Tên tài khoản";
+            this.btnQLLH.AutoSize = true;
+            this.btnQLLH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLLH.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnQLLH.FlatAppearance.BorderSize = 0;
+            this.btnQLLH.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnQLLH.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnQLLH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLLH.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnQLLH.Location = new System.Drawing.Point(191, 0);
+            this.btnQLLH.Name = "btnQLLH";
+            this.btnQLLH.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnQLLH.Size = new System.Drawing.Size(177, 45);
+            this.btnQLLH.TabIndex = 1;
+            this.btnQLLH.Text = "Quản lý Lớp Học";
+            this.btnQLLH.UseVisualStyleBackColor = true;
+            this.btnQLLH.Click += new System.EventHandler(this.btnQLLH_Click);
             // 
-            // password
+            // btnQLSV
             // 
-            this.password.AutoSize = true;
-            this.password.Location = new System.Drawing.Point(239, 194);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(61, 16);
-            this.password.TabIndex = 3;
-            this.password.Text = "Mật khẩu";
+            this.btnQLSV.AutoSize = true;
+            this.btnQLSV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQLSV.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnQLSV.FlatAppearance.BorderSize = 0;
+            this.btnQLSV.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnQLSV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnQLSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLSV.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnQLSV.Location = new System.Drawing.Point(0, 0);
+            this.btnQLSV.Name = "btnQLSV";
+            this.btnQLSV.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnQLSV.Size = new System.Drawing.Size(191, 45);
+            this.btnQLSV.TabIndex = 0;
+            this.btnQLSV.Text = "Quản lý Sinh Viên";
+            this.btnQLSV.UseVisualStyleBackColor = true;
+            this.btnQLSV.Click += new System.EventHandler(this.btnQLSV_Click);
             // 
-            // txt_username
+            // panelContainer
             // 
-            this.txt_username.Location = new System.Drawing.Point(347, 145);
-            this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(166, 22);
-            this.txt_username.TabIndex = 4;
-            // 
-            // txt_password
-            // 
-            this.txt_password.Location = new System.Drawing.Point(347, 191);
-            this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(166, 22);
-            this.txt_password.TabIndex = 5;
+            this.panelContainer.BackColor = System.Drawing.Color.White;
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(0, 45);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(1100, 655);
+            this.panelContainer.TabIndex = 1;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txt_password);
-            this.Controls.Add(this.txt_username);
-            this.Controls.Add(this.password);
-            this.Controls.Add(this.username);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_login);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1100, 700);
+            this.Controls.Add(this.panelContainer);
+            this.Controls.Add(this.panelMenu);
             this.Name = "Main";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quản lý Sinh Viên";
+            this.Load += new System.EventHandler(this.Main_Load);
+            this.panelMenu.ResumeLayout(false);
+            this.panelMenu.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btn_login;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label username;
-        private System.Windows.Forms.Label password;
-        private System.Windows.Forms.TextBox txt_username;
-        private System.Windows.Forms.TextBox txt_password;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Button btnDangXuat;
+        private System.Windows.Forms.Button btnQLLH;
+        private System.Windows.Forms.Button btnQLSV;
+        private System.Windows.Forms.Panel panelContainer;
     }
 }
-

@@ -1,0 +1,11 @@
+# Chặn thư mục tạm của Visual Studio
+.vs/
+*.suo
+*.user
+*.slnx/
+
+# Chặn các thư mục sinh ra khi Build code
+[Dd]ebug/
+[Rr]elease/
+bin/
+obj/
