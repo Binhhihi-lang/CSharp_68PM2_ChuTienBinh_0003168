@@ -22,7 +22,7 @@ namespace WindowsFormsApp01
             ShowUserControl(uc_qlsv);
         }
 
-        // --- HÀM XỬ LÝ CHUYỂN TRANG ---
+        
         private void ShowUserControl(UserControl uc)
         {
             panelContainer.Controls.Clear();

@@ -35,10 +35,6 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btn_search = new System.Windows.Forms.Button();
             this.dgvLopHoc = new System.Windows.Forms.DataGridView();
-            this.colMaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -160,6 +156,7 @@
             this.btn_add.TabIndex = 1;
             this.btn_add.Text = "Thêm";
             this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // btn_edit
             // 
@@ -254,13 +251,9 @@
             this.dgvLopHoc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvLopHoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLopHoc.BackgroundColor = System.Drawing.Color.White;
             this.dgvLopHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLopHoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colMaID,
-            this.colMaLop,
-            this.colTenLop,
-            this.colGhiChu});
             this.dgvLopHoc.Location = new System.Drawing.Point(429, 80);
             this.dgvLopHoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvLopHoc.Name = "dgvLopHoc";
@@ -270,34 +263,6 @@
             this.dgvLopHoc.Size = new System.Drawing.Size(581, 421);
             this.dgvLopHoc.TabIndex = 9;
             this.dgvLopHoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLopHoc_CellContentClick);
-            // 
-            // colMaID
-            // 
-            this.colMaID.HeaderText = "Mã ID";
-            this.colMaID.MinimumWidth = 6;
-            this.colMaID.Name = "colMaID";
-            this.colMaID.Width = 125;
-            // 
-            // colMaLop
-            // 
-            this.colMaLop.HeaderText = "Mã lớp";
-            this.colMaLop.MinimumWidth = 6;
-            this.colMaLop.Name = "colMaLop";
-            this.colMaLop.Width = 125;
-            // 
-            // colTenLop
-            // 
-            this.colTenLop.HeaderText = "Tên lớp";
-            this.colTenLop.MinimumWidth = 6;
-            this.colTenLop.Name = "colTenLop";
-            this.colTenLop.Width = 200;
-            // 
-            // colGhiChu
-            // 
-            this.colGhiChu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colGhiChu.HeaderText = "Ghi chú";
-            this.colGhiChu.MinimumWidth = 6;
-            this.colGhiChu.Name = "colGhiChu";
             // 
             // button9
             // 
@@ -376,6 +341,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_QLLH";
             this.Size = new System.Drawing.Size(1030, 557);
+            this.Load += new System.EventHandler(this.UC_QLLH_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLopHoc)).EndInit();
@@ -404,10 +370,6 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.DataGridView dgvLopHoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTenLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colGhiChu;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label5;

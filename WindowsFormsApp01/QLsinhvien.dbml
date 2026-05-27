@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLSinhVienCSharp" Class="QLsinhvienDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CB05\SQLEXPRESS;Initial Catalog=QLSinhVienCSharp;User ID=sa;Trust Server Certificate=True" SettingsObjectName="WindowsFormsApp01.Properties.Settings" SettingsPropertyName="QLSinhVienCSharpConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Classes" Member="Classes">
+    <Type Name="Class">
+      <Column Name="ClassId" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClassName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="Class_Student" Member="Students" ThisKey="ClassId" OtherKey="ClassId" Type="Student" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Students" Member="Students">
+    <Type Name="Student">
+      <Column Name="MSSV" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DateOfBirth" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ClassId" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Class_Student" Member="Class" ThisKey="ClassId" OtherKey="ClassId" Type="Class" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>
