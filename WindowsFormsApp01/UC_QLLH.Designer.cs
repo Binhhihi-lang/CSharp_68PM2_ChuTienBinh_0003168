@@ -18,28 +18,28 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtGhiChu = new System.Windows.Forms.TextBox();
+            this.txt_classNote = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtTenLop = new System.Windows.Forms.TextBox();
+            this.txt_className = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMaLop = new System.Windows.Forms.TextBox();
+            this.txt_classId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtMaID = new System.Windows.Forms.TextBox();
+            this.txt_id = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_add = new System.Windows.Forms.Button();
-            this.btn_edit = new System.Windows.Forms.Button();
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_clear = new System.Windows.Forms.Button();
-            this.btn_view_list = new System.Windows.Forms.Button();
+            this.btn_add_class = new System.Windows.Forms.Button();
+            this.btn_edit_class = new System.Windows.Forms.Button();
+            this.btn_delete_class = new System.Windows.Forms.Button();
+            this.btn_clear_class = new System.Windows.Forms.Button();
+            this.btn_view_list_student = new System.Windows.Forms.Button();
             this.labelTimKiem = new System.Windows.Forms.Label();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.text_search_class = new System.Windows.Forms.TextBox();
             this.btn_search = new System.Windows.Forms.Button();
             this.dgvLopHoc = new System.Windows.Forms.DataGridView();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_tail = new System.Windows.Forms.Button();
+            this.btn_next_click = new System.Windows.Forms.Button();
+            this.lblPageInfo_class = new System.Windows.Forms.Label();
+            this.btn_previous_click = new System.Windows.Forms.Button();
+            this.btn_head = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLopHoc)).BeginInit();
             this.SuspendLayout();
@@ -49,13 +49,13 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.groupBox1.Controls.Add(this.txtGhiChu);
+            this.groupBox1.Controls.Add(this.txt_classNote);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtTenLop);
+            this.groupBox1.Controls.Add(this.txt_className);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtMaLop);
+            this.groupBox1.Controls.Add(this.txt_classId);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtMaID);
+            this.groupBox1.Controls.Add(this.txt_id);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.groupBox1.Location = new System.Drawing.Point(16, 13);
@@ -67,14 +67,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin lớp học";
             // 
-            // txtGhiChu
+            // txt_classNote
             // 
-            this.txtGhiChu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtGhiChu.Location = new System.Drawing.Point(20, 235);
-            this.txtGhiChu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(304, 27);
-            this.txtGhiChu.TabIndex = 7;
+            this.txt_classNote.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_classNote.Location = new System.Drawing.Point(20, 235);
+            this.txt_classNote.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_classNote.Name = "txt_classNote";
+            this.txt_classNote.Size = new System.Drawing.Size(304, 27);
+            this.txt_classNote.TabIndex = 7;
             // 
             // label4
             // 
@@ -86,14 +86,14 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Ghi chú:";
             // 
-            // txtTenLop
+            // txt_className
             // 
-            this.txtTenLop.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTenLop.Location = new System.Drawing.Point(20, 175);
-            this.txtTenLop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTenLop.Name = "txtTenLop";
-            this.txtTenLop.Size = new System.Drawing.Size(304, 27);
-            this.txtTenLop.TabIndex = 5;
+            this.txt_className.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_className.Location = new System.Drawing.Point(20, 175);
+            this.txt_className.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_className.Name = "txt_className";
+            this.txt_className.Size = new System.Drawing.Size(304, 27);
+            this.txt_className.TabIndex = 5;
             // 
             // label3
             // 
@@ -105,14 +105,14 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Tên lớp:";
             // 
-            // txtMaLop
+            // txt_classId
             // 
-            this.txtMaLop.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMaLop.Location = new System.Drawing.Point(20, 115);
-            this.txtMaLop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.Size = new System.Drawing.Size(304, 27);
-            this.txtMaLop.TabIndex = 3;
+            this.txt_classId.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_classId.Location = new System.Drawing.Point(20, 115);
+            this.txt_classId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_classId.Name = "txt_classId";
+            this.txt_classId.Size = new System.Drawing.Size(304, 27);
+            this.txt_classId.TabIndex = 3;
             // 
             // label2
             // 
@@ -124,14 +124,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Mã lớp:";
             // 
-            // txtMaID
+            // txt_id
             // 
-            this.txtMaID.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMaID.Location = new System.Drawing.Point(20, 55);
-            this.txtMaID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMaID.Name = "txtMaID";
-            this.txtMaID.Size = new System.Drawing.Size(304, 27);
-            this.txtMaID.TabIndex = 1;
+            this.txt_id.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_id.Location = new System.Drawing.Point(20, 55);
+            this.txt_id.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(304, 27);
+            this.txt_id.TabIndex = 1;
             // 
             // label1
             // 
@@ -143,76 +143,80 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã ID:";
             // 
-            // btn_add
+            // btn_add_class
             // 
-            this.btn_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_add.ForeColor = System.Drawing.Color.White;
-            this.btn_add.Location = new System.Drawing.Point(16, 405);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(168, 44);
-            this.btn_add.TabIndex = 1;
-            this.btn_add.Text = "Thêm";
-            this.btn_add.UseVisualStyleBackColor = false;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            this.btn_add_class.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_add_class.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btn_add_class.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add_class.ForeColor = System.Drawing.Color.White;
+            this.btn_add_class.Location = new System.Drawing.Point(16, 405);
+            this.btn_add_class.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_add_class.Name = "btn_add_class";
+            this.btn_add_class.Size = new System.Drawing.Size(168, 44);
+            this.btn_add_class.TabIndex = 1;
+            this.btn_add_class.Text = "Thêm";
+            this.btn_add_class.UseVisualStyleBackColor = false;
+            this.btn_add_class.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // btn_edit
+            // btn_edit_class
             // 
-            this.btn_edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_edit.ForeColor = System.Drawing.Color.White;
-            this.btn_edit.Location = new System.Drawing.Point(205, 405);
-            this.btn_edit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(172, 44);
-            this.btn_edit.TabIndex = 2;
-            this.btn_edit.Text = "Sửa";
-            this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_edit_class.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_edit_class.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.btn_edit_class.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_edit_class.ForeColor = System.Drawing.Color.White;
+            this.btn_edit_class.Location = new System.Drawing.Point(205, 405);
+            this.btn_edit_class.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_edit_class.Name = "btn_edit_class";
+            this.btn_edit_class.Size = new System.Drawing.Size(172, 44);
+            this.btn_edit_class.TabIndex = 2;
+            this.btn_edit_class.Text = "Sửa";
+            this.btn_edit_class.UseVisualStyleBackColor = false;
+            this.btn_edit_class.Click += new System.EventHandler(this.btn_edit_class_Click);
             // 
-            // btn_delete
+            // btn_delete_class
             // 
-            this.btn_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_delete.ForeColor = System.Drawing.Color.White;
-            this.btn_delete.Location = new System.Drawing.Point(16, 453);
-            this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(168, 44);
-            this.btn_delete.TabIndex = 3;
-            this.btn_delete.Text = "Xóa";
-            this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete_class.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_delete_class.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btn_delete_class.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delete_class.ForeColor = System.Drawing.Color.White;
+            this.btn_delete_class.Location = new System.Drawing.Point(16, 453);
+            this.btn_delete_class.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_delete_class.Name = "btn_delete_class";
+            this.btn_delete_class.Size = new System.Drawing.Size(168, 44);
+            this.btn_delete_class.TabIndex = 3;
+            this.btn_delete_class.Text = "Xóa";
+            this.btn_delete_class.UseVisualStyleBackColor = false;
+            this.btn_delete_class.Click += new System.EventHandler(this.btn_delete_class_Click);
             // 
-            // btn_clear
+            // btn_clear_class
             // 
-            this.btn_clear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
-            this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_clear.ForeColor = System.Drawing.Color.White;
-            this.btn_clear.Location = new System.Drawing.Point(205, 453);
-            this.btn_clear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(172, 44);
-            this.btn_clear.TabIndex = 4;
-            this.btn_clear.Text = "Làm mới";
-            this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear_class.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_clear_class.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
+            this.btn_clear_class.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_clear_class.ForeColor = System.Drawing.Color.White;
+            this.btn_clear_class.Location = new System.Drawing.Point(205, 453);
+            this.btn_clear_class.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_clear_class.Name = "btn_clear_class";
+            this.btn_clear_class.Size = new System.Drawing.Size(172, 44);
+            this.btn_clear_class.TabIndex = 4;
+            this.btn_clear_class.Text = "Làm mới";
+            this.btn_clear_class.UseVisualStyleBackColor = false;
+            this.btn_clear_class.Click += new System.EventHandler(this.btn_clear_class_Click);
             // 
-            // btn_view_list
+            // btn_view_list_student
             // 
-            this.btn_view_list.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_view_list.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btn_view_list.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_view_list.ForeColor = System.Drawing.Color.White;
-            this.btn_view_list.Location = new System.Drawing.Point(16, 501);
-            this.btn_view_list.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_view_list.Name = "btn_view_list";
-            this.btn_view_list.Size = new System.Drawing.Size(361, 34);
-            this.btn_view_list.TabIndex = 5;
-            this.btn_view_list.Text = "Xem danh sách sinh viên";
-            this.btn_view_list.UseVisualStyleBackColor = false;
+            this.btn_view_list_student.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_view_list_student.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btn_view_list_student.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_view_list_student.ForeColor = System.Drawing.Color.White;
+            this.btn_view_list_student.Location = new System.Drawing.Point(16, 501);
+            this.btn_view_list_student.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_view_list_student.Name = "btn_view_list_student";
+            this.btn_view_list_student.Size = new System.Drawing.Size(361, 34);
+            this.btn_view_list_student.TabIndex = 5;
+            this.btn_view_list_student.Text = "Xem danh sách sinh viên";
+            this.btn_view_list_student.UseVisualStyleBackColor = false;
+            this.btn_view_list_student.Click += new System.EventHandler(this.btn_view_list_student_Click);
             // 
             // labelTimKiem
             // 
@@ -224,13 +228,13 @@
             this.labelTimKiem.TabIndex = 6;
             this.labelTimKiem.Text = "Tìm kiếm (Mã ID / Mã lớp / Tên lớp):";
             // 
-            // txtTimKiem
+            // text_search_class
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(429, 44);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(181, 22);
-            this.txtTimKiem.TabIndex = 7;
+            this.text_search_class.Location = new System.Drawing.Point(429, 44);
+            this.text_search_class.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.text_search_class.Name = "text_search_class";
+            this.text_search_class.Size = new System.Drawing.Size(181, 22);
+            this.text_search_class.TabIndex = 7;
             // 
             // btn_search
             // 
@@ -244,6 +248,7 @@
             this.btn_search.TabIndex = 8;
             this.btn_search.Text = "Tìm";
             this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // dgvLopHoc
             // 
@@ -262,81 +267,85 @@
             this.dgvLopHoc.RowTemplate.Height = 29;
             this.dgvLopHoc.Size = new System.Drawing.Size(581, 421);
             this.dgvLopHoc.TabIndex = 9;
-            this.dgvLopHoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLopHoc_CellContentClick);
+            this.dgvLopHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLopHoc_CellClick);
             // 
-            // button9
+            // btn_tail
             // 
-            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button9.Location = new System.Drawing.Point(870, 505);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(62, 46);
-            this.button9.TabIndex = 26;
-            this.button9.Text = ">>";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_tail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_tail.Location = new System.Drawing.Point(870, 505);
+            this.btn_tail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_tail.Name = "btn_tail";
+            this.btn_tail.Size = new System.Drawing.Size(62, 46);
+            this.btn_tail.TabIndex = 26;
+            this.btn_tail.Text = ">>";
+            this.btn_tail.UseVisualStyleBackColor = true;
+            this.btn_tail.Click += new System.EventHandler(this.btn_tail_Click);
             // 
-            // button8
+            // btn_next_click
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.Location = new System.Drawing.Point(812, 505);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(62, 46);
-            this.button8.TabIndex = 25;
-            this.button8.Text = ">";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn_next_click.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_next_click.Location = new System.Drawing.Point(812, 505);
+            this.btn_next_click.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_next_click.Name = "btn_next_click";
+            this.btn_next_click.Size = new System.Drawing.Size(62, 46);
+            this.btn_next_click.TabIndex = 25;
+            this.btn_next_click.Text = ">";
+            this.btn_next_click.UseVisualStyleBackColor = true;
+            this.btn_next_click.Click += new System.EventHandler(this.btn_next_click_Click);
             // 
-            // label5
+            // lblPageInfo_class
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(636, 519);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 16);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Trang 1/1 | 2 bản ghi";
+            this.lblPageInfo_class.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblPageInfo_class.AutoSize = true;
+            this.lblPageInfo_class.Location = new System.Drawing.Point(636, 519);
+            this.lblPageInfo_class.Name = "lblPageInfo_class";
+            this.lblPageInfo_class.Size = new System.Drawing.Size(127, 16);
+            this.lblPageInfo_class.TabIndex = 24;
+            this.lblPageInfo_class.Text = "Trang 1/1 | 2 bản ghi";
             // 
-            // button7
+            // btn_previous_click
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button7.Location = new System.Drawing.Point(545, 505);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(62, 46);
-            this.button7.TabIndex = 23;
-            this.button7.Text = "<";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_previous_click.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_previous_click.Location = new System.Drawing.Point(545, 505);
+            this.btn_previous_click.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_previous_click.Name = "btn_previous_click";
+            this.btn_previous_click.Size = new System.Drawing.Size(62, 46);
+            this.btn_previous_click.TabIndex = 23;
+            this.btn_previous_click.Text = "<";
+            this.btn_previous_click.UseVisualStyleBackColor = true;
+            this.btn_previous_click.Click += new System.EventHandler(this.btn_previous_click_Click);
             // 
-            // button6
+            // btn_head
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button6.Location = new System.Drawing.Point(487, 505);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(62, 46);
-            this.button6.TabIndex = 22;
-            this.button6.Text = "<<";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btn_head.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_head.Location = new System.Drawing.Point(487, 505);
+            this.btn_head.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_head.Name = "btn_head";
+            this.btn_head.Size = new System.Drawing.Size(62, 46);
+            this.btn_head.TabIndex = 22;
+            this.btn_head.Text = "<<";
+            this.btn_head.UseVisualStyleBackColor = true;
+            this.btn_head.Click += new System.EventHandler(this.btn_head_Click);
             // 
             // UC_QLLH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btn_tail);
+            this.Controls.Add(this.btn_next_click);
+            this.Controls.Add(this.lblPageInfo_class);
+            this.Controls.Add(this.btn_previous_click);
+            this.Controls.Add(this.btn_head);
             this.Controls.Add(this.dgvLopHoc);
             this.Controls.Add(this.btn_search);
-            this.Controls.Add(this.txtTimKiem);
+            this.Controls.Add(this.text_search_class);
             this.Controls.Add(this.labelTimKiem);
-            this.Controls.Add(this.btn_view_list);
-            this.Controls.Add(this.btn_clear);
-            this.Controls.Add(this.btn_delete);
-            this.Controls.Add(this.btn_edit);
-            this.Controls.Add(this.btn_add);
+            this.Controls.Add(this.btn_view_list_student);
+            this.Controls.Add(this.btn_clear_class);
+            this.Controls.Add(this.btn_delete_class);
+            this.Controls.Add(this.btn_edit_class);
+            this.Controls.Add(this.btn_add_class);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_QLLH";
@@ -353,28 +362,28 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.TextBox txt_classNote;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtTenLop;
+        private System.Windows.Forms.TextBox txt_className;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtMaLop;
+        private System.Windows.Forms.TextBox txt_classId;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtMaID;
+        private System.Windows.Forms.TextBox txt_id;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_add;
-        private System.Windows.Forms.Button btn_edit;
-        private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.Button btn_clear;
-        private System.Windows.Forms.Button btn_view_list;
+        private System.Windows.Forms.Button btn_add_class;
+        private System.Windows.Forms.Button btn_edit_class;
+        private System.Windows.Forms.Button btn_delete_class;
+        private System.Windows.Forms.Button btn_clear_class;
+        private System.Windows.Forms.Button btn_view_list_student;
         private System.Windows.Forms.Label labelTimKiem;
-        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.TextBox text_search_class;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.DataGridView dgvLopHoc;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_tail;
+        private System.Windows.Forms.Button btn_next_click;
+        private System.Windows.Forms.Label lblPageInfo_class;
+        private System.Windows.Forms.Button btn_previous_click;
+        private System.Windows.Forms.Button btn_head;
     }
 
 }
