@@ -184,6 +184,39 @@ namespace WindowsFormsApp01
 
             LoadData();
         }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_mssv.Text))
+            {
+                MessageBox.Show("Vui lòng click chọn một sinh viên trên lưới để xóa!", "Cảnh báo");
+                return;
+            }
+
+            DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn xóa sinh viên này không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                try
+                {
+                    string mssv = txt_mssv.Text;
+                    Student sv = db.Students.FirstOrDefault(s => s.MSSV == mssv);
+
+                    if (sv != null)
+                    {
+                        sv.IsDeleted = true; // Cập nhật biến xóa mềm thành true
+                        db.SubmitChanges();
+
+                        MessageBox.Show("Đã xóa sinh viên thành công!", "Thông báo");
+                        btn_clear_Click(null, null); // Reset lại giao diện sau khi xóa
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message);
+                }
+            }
+        }
+
         // phân trang 
         private void btn_head_Click(object sender, EventArgs e)
         {
