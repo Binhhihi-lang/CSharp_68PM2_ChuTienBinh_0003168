@@ -133,6 +133,37 @@ namespace WindowsFormsApp01
             cbxLopHoc.DisplayMember = "ClassName"; // Tên cột hiển thị trong ComboBox
             cbxLopHoc.ValueMember = "ClassId"; // Tên cột làm giá trị (ID của lớp học)
         }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string mssv = txt_mssv.Text;
+                // Tìm sinh viên theo MSSV đang hiển thị
+                Student sv = db.Students.FirstOrDefault(s => s.MSSV == mssv);
+
+                if (sv != null)
+                {
+                    sv.FullName = txt_name.Text;
+                    sv.Gender = cboGioiTinh.Text;
+                    sv.DateOfBirth = dtpNgaySinh.Value;
+                    sv.ClassId = cbxLopHoc.SelectedValue?.ToString();
+
+                    db.SubmitChanges(); // Lưu thay đổi
+                    MessageBox.Show("Cập nhật thông tin thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn sinh viên cần sửa!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
         private void btn_clear_Click(object sender, EventArgs e)
         {
             txt_mssv.Text = "";
