@@ -83,5 +83,27 @@ namespace WindowsFormsApp01
             cbxLopHoc.DisplayMember = "ClassName"; // Tên cột hiển thị trong ComboBox
             cbxLopHoc.ValueMember = "ClassId"; // Tên cột làm giá trị (ID của lớp học)
         }
+        private void dgvSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // C1 của thầy dòng dữ liệu sẽ lấy cột trong bảng sẽ set lên giao diên 
+                DataGridViewRow row = dgvSinhVien.Rows[e.RowIndex];
+
+                txt_mssv.Text = row.Cells["MSSV"].Value?.ToString();
+                txt_name.Text = row.Cells["FullName"].Value?.ToString();
+                cboGioiTinh.Text = row.Cells["Gender"].Value?.ToString();
+
+                if (row.Cells["DateOfBirth"].Value != null)
+                {
+                    dtpNgaySinh.Value = Convert.ToDateTime(row.Cells["DateOfBirth"].Value);
+                }
+
+                cbxLopHoc.SelectedValue = row.Cells["ClassId"].Value?.ToString();
+
+                txt_mssv.Enabled = false;
+            }
+        }
+
     }
 }
