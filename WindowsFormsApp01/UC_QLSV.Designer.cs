@@ -44,13 +44,13 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             this.dgvSinhVien = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.text_search = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_search = new System.Windows.Forms.Button();
             this.btn_head = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btn_previous_click = new System.Windows.Forms.Button();
+            this.lblPageInfo = new System.Windows.Forms.Label();
+            this.btn_next_click = new System.Windows.Forms.Button();
             this.btn_tail = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).BeginInit();
@@ -199,6 +199,7 @@
             this.btn_edit.TabIndex = 9;
             this.btn_edit.Text = "Sửa";
             this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // btn_delete
             // 
@@ -211,6 +212,7 @@
             this.btn_delete.TabIndex = 10;
             this.btn_delete.Text = "Xóa";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_clear
             // 
@@ -223,6 +225,7 @@
             this.btn_clear.TabIndex = 11;
             this.btn_clear.Text = "Làm mới";
             this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // dgvSinhVien
             // 
@@ -241,14 +244,15 @@
             this.dgvSinhVien.RowTemplate.Height = 28;
             this.dgvSinhVien.Size = new System.Drawing.Size(720, 382);
             this.dgvSinhVien.TabIndex = 12;
+            this.dgvSinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSinhVien_CellClick);
             // 
-            // textBox1
+            // text_search
             // 
-            this.textBox1.Location = new System.Drawing.Point(524, 44);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(421, 22);
-            this.textBox1.TabIndex = 13;
+            this.text_search.Location = new System.Drawing.Point(525, 45);
+            this.text_search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.text_search.Name = "text_search";
+            this.text_search.Size = new System.Drawing.Size(421, 22);
+            this.text_search.TabIndex = 13;
             // 
             // label3
             // 
@@ -272,6 +276,7 @@
             this.btn_search.TabIndex = 16;
             this.btn_search.Text = "Tìm";
             this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // btn_head
             // 
@@ -283,38 +288,41 @@
             this.btn_head.TabIndex = 17;
             this.btn_head.Text = "<<";
             this.btn_head.UseVisualStyleBackColor = true;
+            this.btn_head.Click += new System.EventHandler(this.btn_head_Click);
             // 
-            // button7
+            // btn_previous_click
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button7.Location = new System.Drawing.Point(746, 512);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(62, 46);
-            this.button7.TabIndex = 18;
-            this.button7.Text = "<";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_previous_click.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_previous_click.Location = new System.Drawing.Point(746, 512);
+            this.btn_previous_click.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_previous_click.Name = "btn_previous_click";
+            this.btn_previous_click.Size = new System.Drawing.Size(62, 46);
+            this.btn_previous_click.TabIndex = 18;
+            this.btn_previous_click.Text = "<";
+            this.btn_previous_click.UseVisualStyleBackColor = true;
+            this.btn_previous_click.Click += new System.EventHandler(this.button7_Click);
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(837, 526);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 16);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Trang 1/1 | 2 bản ghi";
+            this.lblPageInfo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblPageInfo.AutoSize = true;
+            this.lblPageInfo.Location = new System.Drawing.Point(837, 526);
+            this.lblPageInfo.Name = "label4";
+            this.lblPageInfo.Size = new System.Drawing.Size(127, 16);
+            this.lblPageInfo.TabIndex = 19;
+            this.lblPageInfo.Text = "Trang 1/1 | 2 bản ghi";
             // 
-            // button8
+            // btn_next_click
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.Location = new System.Drawing.Point(1013, 512);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(62, 46);
-            this.button8.TabIndex = 20;
-            this.button8.Text = ">";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn_next_click.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_next_click.Location = new System.Drawing.Point(1013, 512);
+            this.btn_next_click.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_next_click.Name = "btn_next_click";
+            this.btn_next_click.Size = new System.Drawing.Size(62, 46);
+            this.btn_next_click.TabIndex = 20;
+            this.btn_next_click.Text = ">";
+            this.btn_next_click.UseVisualStyleBackColor = true;
+            this.btn_next_click.Click += new System.EventHandler(this.btn_next_click_Click);
             // 
             // btn_tail
             // 
@@ -326,19 +334,20 @@
             this.btn_tail.TabIndex = 21;
             this.btn_tail.Text = ">>";
             this.btn_tail.UseVisualStyleBackColor = true;
+            this.btn_tail.Click += new System.EventHandler(this.btn_tail_Click);
             // 
             // UC_QLSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btn_tail);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btn_next_click);
+            this.Controls.Add(this.lblPageInfo);
+            this.Controls.Add(this.btn_previous_click);
             this.Controls.Add(this.btn_head);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.text_search);
             this.Controls.Add(this.dgvSinhVien);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_delete);
@@ -366,6 +375,7 @@
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.TextBox txt_mssv;
+        private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.Label ngaysinh;
         private System.Windows.Forms.Label lop;
         private System.Windows.Forms.Label hoten;
@@ -375,13 +385,13 @@
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.DataGridView dgvSinhVien;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox text_search;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Button btn_head;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btn_previous_click;
+        private System.Windows.Forms.Label lblPageInfo;
+        private System.Windows.Forms.Button btn_next_click;
         private System.Windows.Forms.Button btn_tail;
     }
 }

@@ -47,7 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DbContext.cs" />
+    <Compile Include="DSSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DSSinhVien.Designer.cs">
+      <DependentUpon>DSSinhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +96,9 @@
     <Compile Include="UC_QLSV.Designer.cs">
       <DependentUpon>UC_QLSV.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DSSinhVien.resx">
+      <DependentUpon>DSSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +123,14 @@
     <EmbeddedResource Include="UC_QLSV.resx">
       <DependentUpon>UC_QLSV.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
