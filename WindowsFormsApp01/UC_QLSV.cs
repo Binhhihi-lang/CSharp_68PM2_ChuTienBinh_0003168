@@ -13,6 +13,10 @@ namespace WindowsFormsApp01
     public partial class UC_QLSV : UserControl
     {
         QLsinhvienDataContext db = new QLsinhvienDataContext();
+        int pageSize = 10;          // Số lượng bản ghi trên 1 trang (10 sinh viên)
+        int currentPage = 1;        // Trang hiện tại
+        int totalPages = 1;         // Tổng số trang
+        string currentSearchStr = ""; // Lưu trữ từ khóa tìm kiếm hiện tại
         public UC_QLSV()
         {
             InitializeComponent();
@@ -64,16 +68,62 @@ namespace WindowsFormsApp01
             }
 
         }
+        // Chọn Sinh Viên khi chọn hiển thị lên 
+        // bắt sự kiện cho nút sửa 
+        // khi bấm vào nút sửa với , không cho phép sửa mssv 
+        // Xóa chọn vào 1 sinh viên , khi người dùng chọn sinh viên dgrv 
+        // xóa mềm : update , agentdelete: false , 
+        // xóa cứng: Delete and submit 
+        // where biến đánh dấu thể hiện xóa mềm = false 
+        // Nút làm mới đặt giá trị mặc định : ngày thì ngày hiện thời 
+        // Phân trang cùng 1 hàm : 2 giá trị : số lượng bản ghi trên 1 trang (pageSize) và currentPage ,trang 1: 1-10, trang 2 lấy bản ghi từ 11 đến 20
+        // trang 3 21 đến 30 (x-1)* 10+1 đến x*10 
+        // skip bỏ qua bao nhiêu bản ghi và lấy bản ghi thứ bao nhiêu 
+        // search Student 
 
+        // QL lớp học 
+        // Tạo form quản lý lớp học tương tự như quản lý sinh viên, có các chức năng thêm, sửa, xóa, tìm kiếm và phân trang.
+        // xem 
         public void LoadData()
         {
-            List<Student> dsSinhVien = db.Students.ToList();
-            dgvSinhVien.DataSource = dsSinhVien;
+            // 1. Lấy toàn bộ dữ liệu CHƯA BỊ XÓA MỀM (IsDeleted == false)
+            var query = db.Students.Where(s => s.IsDeleted == false || s.IsDeleted == null);
+
+            // 2. Nếu có từ khóa tìm kiếm thì áp dụng bộ lọc (Tìm theo Tên, MSSV hoặc Lớp)
+            if (!string.IsNullOrEmpty(currentSearchStr))
+            {
+                // lấy sinh viên nào mà có từ khóa 
+                query = query.Where(s => s.FullName.Contains(currentSearchStr) ||
+                                         s.MSSV.Contains(currentSearchStr) ||
+                                         s.ClassId.Contains(currentSearchStr));
+            }
+
+            // 3. Tính toán tổng số trang
+            int totalRecords = query.Count();
+            // làm tròn lên 
+            totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
+            if (totalPages == 0) totalPages = 1; // Nếu không có dữ liệu thì vẫn tính là trang 1
+            if (currentPage > totalPages) currentPage = totalPages;
+
+            // Lấy danh sách phân trang 
+            // Skip: Bỏ qua các bản ghi của trang trước. Take: Chỉ lấy đúng 10 bản ghi cho trang này.
+            var pagedData = query.Skip((currentPage - 1) * pageSize).Take(pageSize).ToList();
+
+           
+            dgvSinhVien.DataSource = pagedData;
+
             if (dgvSinhVien.Columns["Class"] != null)
             {
                 dgvSinhVien.Columns["Class"].Visible = false;
             }
+            // bỏ qua cột IsDeleted 
+            if (dgvSinhVien.Columns["IsDeleted"] != null)
+            {
+                dgvSinhVien.Columns["IsDeleted"].Visible = false;
+            }
+            lblPageInfo.Text = $"Trang {currentPage}/{totalPages} | {totalRecords} bản ghi";
         }
+
         public void LoadLopHoc()
         {
             List<Class> dsLopHoc = db.Classes.ToList();
@@ -83,6 +133,68 @@ namespace WindowsFormsApp01
             cbxLopHoc.DisplayMember = "ClassName"; // Tên cột hiển thị trong ComboBox
             cbxLopHoc.ValueMember = "ClassId"; // Tên cột làm giá trị (ID của lớp học)
         }
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            txt_mssv.Text = "";
+            txt_name.Text = "";
+            cboGioiTinh.SelectedIndex = -1;
+            cbxLopHoc.SelectedIndex = 0;
+
+            // Ngày thì lấy ngày hiện thời
+            dtpNgaySinh.Value = DateTime.Now;
+
+            // Mở khóa lại ô MSSV để cho phép Thêm mới
+            txt_mssv.Enabled = true;
+
+            // Reset trạng thái tìm kiếm và phân trang
+            currentSearchStr = "";
+            if (text_search != null) text_search.Text = ""; // Xóa text ở ô tìm kiếm nếu có
+            currentPage = 1;
+
+            LoadData();
+        }
+        // phân trang 
+        private void btn_head_Click(object sender, EventArgs e)
+        {
+            currentPage = 1;
+            LoadData();
+        }
+
+        // previous click 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (currentPage > 1)
+            {
+                currentPage--;
+                LoadData();
+            }
+        }
+
+        private void btn_next_click_Click(object sender, EventArgs e)
+        {
+            if (currentPage < totalPages)
+            {
+                currentPage++;
+                LoadData();
+            }
+        }
+
+        private void btn_tail_Click(object sender, EventArgs e)
+        {
+            currentPage = totalPages;
+            LoadData();
+        }
+
+        // tìm kiếm theo tên , mssv , lớp học
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            // Cập nhật từ khóa và ép load lại từ trang 1
+            currentSearchStr = text_search.Text.Trim(); 
+            currentPage = 1;
+            LoadData();
+        }
+
+
         private void dgvSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
